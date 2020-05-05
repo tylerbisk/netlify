@@ -1,6 +1,6 @@
 ---
 layout: minimal
-permalink: /sipsprivacy/
+permalink: /sips/privacy/
 ---
 # Sips Privacy Policy
 ---
