@@ -1,12 +1,14 @@
 ---
-layout: page
-title: Sips Privacy Policy
+layout: minimal
 permalink: /sipsprivacy/
 ---
+# Sips Privacy Policy
+---
+##### This policy applies to all information collected or submitted on Sips: Drink with Friends on iPhone and any other devices and platforms
 
-This policy applies to all information collected or submitted on Sips: Drink with Friends on iPhone and any other devices and platforms.
+**Sips: Drink with Friends will hereinafter be referred to as Sips**
 
-Sips: Drink with Friends will hereby be referred to as Sips
+---
 
 ### Information we collect
 

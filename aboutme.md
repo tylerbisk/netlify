@@ -1,16 +1,17 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle:
+permalink: /about/
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Hi, my name is Tyler Bisk.  I am currently a freshman at Cornell University's College of Engineering who is interested in all things technology.  
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Alongside my love for exploring the capabilities of computers, I am an avid chef, a member of [Phi Gamma Delta](http://www.phigam.org)'s Kappa Nu chapter, and an Electrical Engineer for [Cornell Racing](http://www.cornellracing.org), in which we completely build an electric formula-style racecar each year and race in [FSAE](https://www.sae.org/attend/student-events/formula-sae-electric/about)'s competitions.
 
-What else do you need?
+### To find out more about me please:
+- [Follow](http://www.instagram.com/tylerbisk) on **Instagram**
+- [Connect](http://www.linkedin.com/in/tylerbisk) on **Linkedin**
+- [Download](https://github.com/tylerbisk/tylerbisk.github.io/raw/master/Files/resumenew.pdf) my **resume**
 
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+###### thanks for stopping by!
