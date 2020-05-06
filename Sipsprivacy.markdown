@@ -54,7 +54,7 @@ By using Sips, you consent to our privacy policy.
 
 ### Contacting Us
 
-If you have questions regarding this privacy policy, you may email <h1>Sips@gmail.com</h1>.
+If you have questions regarding this privacy policy, you may email [sips.drinkwithfriends@gmail.com](mailto: sips.drinkwithfriends@gmail.com)
 
 ### Changes to this policy
 
