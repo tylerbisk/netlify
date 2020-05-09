@@ -6,13 +6,15 @@ permalink: /sips/support
 ---
 
 ## FAQ
-**Q:**
-**A:**
+**Q:** Can Sips see the data I enter?  
+**A:** Sips cannot read the information you enter in-app
 
-**Q:**
-**A:**
+**Q:** Can you add this feature?  
+**A:** Email us!
 
-**Q:**
-**A:**
+**Q:** Some cards don't really work with 1-2 people  
+**A:** We will be pushing an update soon to automatically remove those cards when playing with
+1-2 people
 
-**Further questions?** email us at [sips.drinkwithfriends@gmail.com](mailto: sips.drinkwithfriends@gmail.com)
+**Further questions?** email us at [sips.drinkwithfriends@gmail.com](mailto: sips.drinkwithfriends@gmail.com)  
+###### Take me back to [Sips](/sips/)
