@@ -3,6 +3,8 @@ layout: page
 title: Sips Support
 subtitle: Get Help With Sips
 permalink: /sips/support
+share-img: "/assets/img/sipslogo.png"
+image: "/assets/img/sipslogo.png"
 ---
 
 ## FAQ

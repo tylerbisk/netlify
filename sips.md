@@ -3,6 +3,8 @@ layout: page
 title: "Sips"
 subtitle: Drink with Friends
 permalink: /sips/
+share-img: "/assets/img/sipslogo.png"
+image: "/assets/img/sipslogo.png"
 ---
 Download [Sips](https://apps.apple.com/us/app/id1511594732) for iOS
 <div align="center">
