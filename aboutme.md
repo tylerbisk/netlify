@@ -12,6 +12,6 @@ Alongside my love for exploring the capabilities of computers, I am an avid chef
 ### To find out more about me please:
 - [Follow](http://www.instagram.com/tylerbisk) on **Instagram**
 - [Connect](http://www.linkedin.com/in/tylerbisk) on **Linkedin**
-- [Download](https://github.com/tylerbisk/tylerbisk.github.io/raw/master/Files/resumenew.pdf) my **resume**
+- [Download](https://github.com/tylerbisk/netlify/raw/master/assets/files/TylerBiskResume.pdf) my **resume**
 
 ###### thanks for stopping by!
