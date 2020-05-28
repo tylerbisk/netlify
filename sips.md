@@ -14,7 +14,7 @@ Download [Sips](https://apps.apple.com/us/app/id1511594732) for iOS
 
 </div>
 
-Sips is the first-ever drinking game you can play whenever and wherever. All you need is the app and some friends. Whether your party is in-person or on Zoom, Sips has you covered.
+Sips is the first-ever party game that you can play whenever and wherever. All you need is the app, some friends, and the drink of your choice. Whether your party is in-person or on Zoom, Sips has you covered.
 
 To begin playing, tap New Game to "shuffle" the deck and let the fun begin. Players will be randomly selected to participate in dares, games, trivia, and so much more.
 
