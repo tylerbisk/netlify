@@ -55,7 +55,7 @@ By using FFF, you consent to our privacy policy.
 
 ### Contacting Us
 
-If you have questions regarding this privacy policy, you may email FFFSupport@gmail.com
+If you have questions regarding this privacy policy, you may email [FFFSupport@gmail.com](mailto: FFFSupport@gmail.com)
 
 ### Changes to this policy
 v1.0 June 13, 2020
