@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Sips Support
-subtitle: Get Help With Sips
-permalink: /sips/support
+title: Free Food Finder Support
+subtitle: Get Help With FFF
+permalink: /Free-Food-Finder/support
 share-img: "/assets/img/FFFLogo.png"
 image: "/assets/img/FFFLogo.png"
 ---
