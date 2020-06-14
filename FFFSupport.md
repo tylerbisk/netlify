@@ -8,13 +8,13 @@ image: "/assets/img/FFFLogo.png"
 ---
 
 ## FAQ
-**Q:** Can FFF see the data I enter?
+**Q:** Can FFF see the data I enter?  
 **A:** FFF has access to usernames and emails but does not sell your data.
 
-**Q:** Can you add this feature?
+**Q:** Can you add this feature?  
 **A:** Email us!
 
-**Q:** When will you be adding my school?
+**Q:** When will you be adding my school?  
 **A:** We are working as quickly as possible to bring FFF to colleges around the world. Email us if you want your school included in the next update.
 
 **Further questions?** email us at [FFFSupport@gmail.com](mailto: FFFSupport@gmail.com)
