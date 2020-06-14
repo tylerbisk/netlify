@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Sips"
-subtitle: Drink with Friends
+title: "Free Food Finder"
+subtitle: Give Free Stuff, Get Free Stuff
 permalink: /Free-Food-Finder/
 share-img: "/assets/img/FFFLogo.png"
 image: "/assets/img/FFFLogo.png"
