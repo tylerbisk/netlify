@@ -15,4 +15,4 @@ image: "/assets/img/FFFLogo.png"
 This is where the description will go!
 
 
-[Privacy Policy](/Free-Food-Finder/privacy/) | [Support](/Free-Food-Finder/support)
+[Privacy Policy](/Freasy/privacy/) | [Support](/Freasy/support)
