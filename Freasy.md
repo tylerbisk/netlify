@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Free Food Finder"
-subtitle: Give Free Stuff, Get Free Stuff
-permalink: /Free-Food-Finder/
+title: "Freasy"
+subtitle: Free stuff made easy
+permalink: /Freasy/
 share-img: "/assets/img/FFFLogo.png"
 image: "/assets/img/FFFLogo.png"
 ---
