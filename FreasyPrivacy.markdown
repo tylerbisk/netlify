@@ -57,5 +57,5 @@ By using Freasy, you consent to our privacy policy.
 If you have questions regarding this privacy policy, you may email [FreasyApp@gmail.com](mailto: freasyapp@gmail.com)
 
 ### Changes to this policy
-v1.0 June 13, 2020
+v1.0 June 13, 2020  
 v2.0 July 25, 2020

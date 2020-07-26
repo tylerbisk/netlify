@@ -17,5 +17,5 @@ image: "/assets/img/FFFLogo.png"
 **Q:** When will you be adding my school?  
 **A:** We are working as quickly as possible to bring Freasy to colleges around the world. Email us if you want your school included in the next update.
 
-**Further questions?** email us at [FreasyAppt@gmail.com](mailto: FreasyApp@gmail.com)
-###### Take me back to [Freasyr](/Freasy/)
+**Further questions?** email us at [FreasyApp@gmail.com](mailto: FreasyApp@gmail.com)
+###### Take me back to [Freasy](/Freasy/)
