@@ -1,18 +1,19 @@
 ---
 layout: page
 title: "Freasy"
-subtitle: Free stuff made easy
-permalink: /Freasy/
-share-img: "/assets/img/FFFLogo.png"
-image: "/assets/img/FFFLogo.png"
+subtitle: Free Stuff Made Easy
+permalink: /freasy/
+share-img: "/assets/img/freasyicon.png"
+image: "/assets/img/freasyicon.png"
 ---
-
 <div align="center">
-    <h1>Coming Soon!</h1>
+    <h1>Coming Soon to Cornell University</h1>
+
+    <img src="{{ 'assets/img/freasy_logo_rounded.png' | relative_url }}" style="width: 40%"/>
 
 </div>
 
-This is where the description will go!
+Description..
 
 
-[Privacy Policy](/Freasy/privacy/) | [Support](/Freasy/support)
+[Privacy Policy](/freasy/privacy/) | [Support](/freasy/support) | [Terms of Service](/freasy/terms_of_service)
