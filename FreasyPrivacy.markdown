@@ -1,7 +1,7 @@
 ---
 layout: minimal
 permalink: /Freasy/privacy/
-share-img: "/assets/img/FFFLogo.png"
+share-img: "/assets/img/freasyicon.png"
 ---
 # Freasy Privacy Policy
 ---

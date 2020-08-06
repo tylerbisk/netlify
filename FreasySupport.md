@@ -3,8 +3,8 @@ layout: page
 title: Freasy Support
 subtitle: Get Help With Freasy
 permalink: /Freasy/support
-share-img: "/assets/img/FFFLogo.png"
-image: "/assets/img/FFFLogo.png"
+share-img: "/assets/img/freasyicon.png"
+image: "/assets/img/freasyicon.png"
 ---
 
 ## FAQ
