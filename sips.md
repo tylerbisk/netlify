@@ -7,7 +7,7 @@ share-img: "/assets/img/sipslogo.png"
 image: "/assets/img/sipslogo.png"
 ---
 Download [Sips](https://apps.apple.com/us/app/id1511594732) for iOS  
-Proudly featured in an article: "[Hidden Gems: Top Card Games To Play On IOS](https://gameskeys.net/hidden-gems-top-card-games-to-play-on-ios/)"
+Proudly featured in an article: "[Hidden Gems: Top Card Games To Play On IOS](https://gameskeys.net/hidden-gems-top-card-games-to-play-on-ios/#Sips)"
 <div align="center">
     <h1>Version 1.0.1 out now!</h1>
 
