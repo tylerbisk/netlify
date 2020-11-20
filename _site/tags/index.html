@@ -12,7 +12,7 @@
 
   
 
-  <link rel="alternate" type="application/rss+xml" title="Tyler Bisk - My life on a website" href="http://localhost:4000/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Tyler Bisk - My Engineering Portfolio" href="http://localhost:4000/feed.xml">
 
   
 
@@ -77,8 +77,6 @@
   
 
   
-  <meta property="og:image" content="http://localhost:4000/assets/img/headshot.png">
-  
 
 
   <!-- Twitter summary cards -->
@@ -94,8 +92,6 @@
   <meta name="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
   
 
-  
-  <meta name="twitter:image" content="http://localhost:4000/assets/img/headshot.png">
   
 
   
@@ -120,21 +116,39 @@
             <a class="nav-link" href="/about">About Me</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cornell FSAE</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/fsae/about">about</a>
+                  <a class="dropdown-item" href="/fsae/tsm">Temperature Sensing Module</a>
+                  <a class="dropdown-item" href="/fsae/shutdownbox">Shutdown Box</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">iOS App Dev</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="/sips">Sips</a>
                   <a class="dropdown-item" href="/freasy">Freasy</a>
             </div>
           </li>
-        </ul>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Projects</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/fpga">Verilog and FPGA</a>
+                  <a class="dropdown-item" href="/space_invaders">Space Invaders</a>
+                  <a class="dropdown-item" href="/ib">International Baccelauriate</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Me</a>
+          </li></ul>
   </div>
 
-  
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        <img alt="Navbar avatar" class="avatar-img" src="/assets/img/headshot.png" />
-      </div>
-    </div>
   
 
 </nav>
