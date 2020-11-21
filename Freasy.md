@@ -1,6 +1,6 @@
 ---
-layout: page
-title: "Freasy"
+layout: page_pink
+title: Freasy
 subtitle: Free Stuff Made Easy
 permalink: /freasy/
 share-img: "/assets/img/freasyicon.png"

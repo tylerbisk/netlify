@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: page2
+title: About Cornell Racing FSAE
 permalink: /fsae/about
 share-img: "/assets/img/banner.jpg"
 ---

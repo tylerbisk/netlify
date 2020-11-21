@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: page2
+title: Charger Shutdown Box
 permalink: /fsae/charge_sb
-share-img: "/assets/img/banner.jpg"
+share-img: "/assets/img/chgsbrev2.png"
 ---
 
 

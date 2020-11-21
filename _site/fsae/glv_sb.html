@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Tyler Bisk</title>
+  <title>GLV Shutdown Box</title>
 
   
   <meta name="author" content="© Tyler Bisk">
@@ -61,7 +61,7 @@
   
 
   
-  <meta property="og:title" content="Tyler Bisk">
+  <meta property="og:title" content="GLV Shutdown Box">
   
 
    
@@ -77,7 +77,7 @@
   
 
   
-  <meta property="og:image" content="/assets/img/banner.jpg">
+  <meta property="og:image" content="/assets/img/glvsb.png">
   
 
 
@@ -87,7 +87,7 @@
   <meta name="twitter:creator" content="@tylerbisk">
 
   
-  <meta name="twitter:title" content="Tyler Bisk">
+  <meta name="twitter:title" content="GLV Shutdown Box">
   
 
   
@@ -95,7 +95,7 @@
   
 
   
-  <meta name="twitter:image" content="/assets/img/banner.jpg">
+  <meta name="twitter:image" content="/assets/img/glvsb.png">
   
 
   
@@ -164,7 +164,28 @@
 
 
 
-<div class="intro-header"></div>
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="page-heading">
+          <h1></h1>
+      
+
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
 
 
 
@@ -189,7 +210,7 @@
 
 <p>There are many rules regarding car safety and shutdown circuitry that must be complied with in order to race in competition.  In summary, my board must detect isolation failure, temperatures and voltages outside an allowable range, and simultaneous braking and acceleration inputs.  If one of these faults are detected, an indicator light must illuminate while immediately cutting power to and from the accumulator.</p>
 
-<p>It is my responsibility to make sure that my board exceeds what is specified by the rules in order to be confident that we will get to competition with a rules compliant car.  There are four pages of rules pertaining to the GLV Shutdown Box.  You can read about them <a href="https://www.fsaeonline.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=6d9f4b51-a642-425c-bfdf-5f95b4e5e10b">here</a> if you’d like (pages 95-98).</p>
+<p>It is my responsibility to make sure that my board exceeds what is specified by the rules in order to be confident that we will get to competition with a rules compliant car.  There are four pages of rules pertaining to the GLV Shutdown Box.  You can read about them <a href="https://www.fsaeonline.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=6d9f4b51-a642-425c-bfdf-5f95b4e5e10b" target="_blank">here</a> if you’d like (pages 95-98).</p>
 
 <h5 id="research">Research</h5>
 <p>In order for my board to detect when there is or is not a fault, the board has five inputs, each indicating the status of other systems.  If any of these signals indicate a fault or error that meet the criteria in the rules listed above, the corresponding latching circuit opens open and disables the tractive system.  Below is a list of signals that I will be monitoring, with the type of fault it outputs.</p>

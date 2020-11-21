@@ -1,5 +1,6 @@
 ---
 layout: minimal
+title: Freasy Privacy Policy
 permalink: /Freasy/privacy/
 share-img: "/assets/img/freasyicon.png"
 ---

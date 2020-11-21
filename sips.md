@@ -1,27 +1,33 @@
 ---
-layout: page
-title: "Sips"
+layout: page_blue
+title: Sips
 subtitle: Drink with Friends
 permalink: /sips/
 share-img: "/assets/img/sipslogo.png"
 ---
-Download [Sips](https://apps.apple.com/us/app/id1511594732) for iOS  
-Proudly featured in an article: "[Hidden Gems: Top Card Games To Play On IOS](https://gameskeys.net/hidden-gems-top-card-games-to-play-on-ios/#Sips)"
+
+
 <div align="center">
-    <h1>Version 1.0.1 out now!</h1>
-
-    <img src="{{ 'assets/img/sips_logo_rounded.png' | relative_url }}" style="width: 40%"/>
-
+    <img src="{{ '/assets/img/title.png' | relative_url }}" style="width: 50%"/>
+    <img src="{{ '/assets/img/logotranspfinal.png' | relative_url }}" style="width: 50%"/>
 </div>
 
+Sips is the first iOS application I have ever developed.  After having taken a couple computer science and engineering classes my freshman year, I decided I had enough of a foundation to make a simple app for iOS.  I spent weeks reading up on how to use Xcode, how to write in Swift, and how apps get listed on the app store.
 
-Sips is the first-ever party game that you can play whenever and wherever. All you need is the app, some friends, and the drink of your choice. Whether your party is in-person or on Zoom, Sips has you covered.
+As was the case for millions, not being able to hang out with my friends due to COVID-19 was emotionally draining.  Zoom chats with friends were fun but not the same as being physically present.  After brainstorming, the seed for Sips had sprouted: a multiplayer card game that was designed with the intention that it is to be played over zoom.
 
-To begin playing, tap New Game to "shuffle" the deck and let the fun begin. Players will be randomly selected to participate in dares, games, trivia, and so much more.
+<div align="center">
+    <img src="{{ '/assets/img/sipsgame.png' | relative_url }}" style="width: 100%"/>
+</div>
 
-Sips can be played by whoever, but works best when 3+ people are participating in a single game. Add up to 16 friends!
+Even after all of the self teaching I'd done, my lack of experience caused progress to be slow, albeit steady.   I was the sole person working on the project for weeks on end.  All of the code is written by me, but I also am responsible for debugging, marketing, and even branding using Photoshop.  Coding, debugging, adding features, making them better was all left up to me.  I even coded up a website using HTML for marketing and legal purposes, which is required in order to list your app to the App Store.
 
-Can't get enough of Sips? You can email us suggestions straight from the main menu on how we can improve!
+After finalizing and releasing the game, I realized how far I had come and how much I had learned in just a few short months.   While Sips taught me so much about App Dev, I am tabling the project for now in order to pave the way for the other apps I have coming down the pipeline.  Thanks to Sips, my first ever development project, I love every part of the process and plan to continue making apps in my free time for years to come.
 
 
-[Privacy Policy](/sips/privacy/) | [Support](/sips/support)
+
+##### Actions:
+- Download Sips on the iOS App Store [here](https://apps.apple.com/us/app/id1511594732){:target="_blank"}
+- Read about Sips in the article "[*Hidden Gems: Top Card Games To Play On IOS*](https://gameskeys.net/hidden-gems-top-card-games-to-play-on-ios/#Sips){:target="_blank"}"  
+- Sip's [Privacy Policy](/sips/privacy/)  
+- Sip's [Support and FAQ](/sips/support)

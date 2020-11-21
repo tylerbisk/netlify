@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: page2
+title: GLV Shutdown Box
 permalink: /fsae/glv_sb
-share-img: "/assets/img/banner.jpg"
+share-img: "/assets/img/glvsb.png"
 ---
 
 
@@ -23,7 +24,7 @@ The function of the GLV_SB is to safely turn off the car when a variety of condi
 
 There are many rules regarding car safety and shutdown circuitry that must be complied with in order to race in competition.  In summary, my board must detect isolation failure, temperatures and voltages outside an allowable range, and simultaneous braking and acceleration inputs.  If one of these faults are detected, an indicator light must illuminate while immediately cutting power to and from the accumulator.
 
-It is my responsibility to make sure that my board exceeds what is specified by the rules in order to be confident that we will get to competition with a rules compliant car.  There are four pages of rules pertaining to the GLV Shutdown Box.  You can read about them [here](https://www.fsaeonline.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=6d9f4b51-a642-425c-bfdf-5f95b4e5e10b) if you'd like (pages 95-98).
+It is my responsibility to make sure that my board exceeds what is specified by the rules in order to be confident that we will get to competition with a rules compliant car.  There are four pages of rules pertaining to the GLV Shutdown Box.  You can read about them [here](https://www.fsaeonline.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=6d9f4b51-a642-425c-bfdf-5f95b4e5e10b){:target="_blank"} if you'd like (pages 95-98).
 
 
 ##### Research

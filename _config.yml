@@ -25,7 +25,6 @@ navbar-links:
   Other Projects:
     - Verilog and FPGA: "fpga"
     - Space Invaders: "space_invaders"
-
     - International Baccelauriate: "ib"
   Resume: "resume"
   Contact Me: "contact"
