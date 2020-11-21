@@ -4,7 +4,6 @@ title: "Sips"
 subtitle: Drink with Friends
 permalink: /sips/
 share-img: "/assets/img/sipslogo.png"
-image: "/assets/img/sipslogo.png"
 ---
 Download [Sips](https://apps.apple.com/us/app/id1511594732) for iOS  
 Proudly featured in an article: "[Hidden Gems: Top Card Games To Play On IOS](https://gameskeys.net/hidden-gems-top-card-games-to-play-on-ios/#Sips)"

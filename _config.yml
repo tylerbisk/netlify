@@ -17,7 +17,8 @@ navbar-links:
   Cornell FSAE:
     - about: "fsae/about"
     - Temperature Sensing Module: "fsae/tsm"
-    - Shutdown Box: "fsae/shutdownbox"
+    - GLV Shutdown Box: "fsae/glv_sb"
+    - Charger Shutdown Box: "fsae/charge_sb"
   iOS App Dev:
     - Sips: "sips"
     - Freasy: "freasy"

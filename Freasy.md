@@ -4,7 +4,6 @@ title: "Freasy"
 subtitle: Free Stuff Made Easy
 permalink: /freasy/
 share-img: "/assets/img/freasyicon.png"
-image: "/assets/img/freasyicon.png"
 ---
 <div align="center">
     <h1>Coming Soon to Cornell University</h1>

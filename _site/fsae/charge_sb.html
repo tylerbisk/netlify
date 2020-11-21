@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Tyler Bisk</title>
+
+  
+  <meta name="author" content="© Tyler Bisk">
+  
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Tyler Bisk - My Engineering Portfolio" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+  
+
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Tyler Bisk">
+  
+
+   
+  <meta property="og:description" content="Charger Shutdown Box (Charge SB) ##### Introduction The function of the CHARGE_SB is to handle shutting down the charger if a problem arises while charging. Unlike the GLV_SB, this board is not inside the car, but rather inside the charger. Like the GLV_SB, the board is essential because it allows...">
+  
+
+
+  <meta property="og:type" content="website">
+
+  
+  <meta property="og:url" content="http://localhost:4000/fsae/charge_sb">
+  <link rel="canonical" href="http://localhost:4000/fsae/charge_sb">
+  
+
+  
+  <meta property="og:image" content="/assets/img/banner.jpg">
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@tylerbisk">
+  <meta name="twitter:creator" content="@tylerbisk">
+
+  
+  <meta name="twitter:title" content="Tyler Bisk">
+  
+
+  
+  <meta name="twitter:description" content="Charger Shutdown Box (Charge SB) ##### Introduction The function of the CHARGE_SB is to handle shutting down the charger if a problem arises while charging. Unlike the GLV_SB, this board is not inside the car, but rather inside the charger. Like the GLV_SB, the board is essential because it allows...">
+  
+
+  
+  <meta name="twitter:image" content="/assets/img/banner.jpg">
+  
+
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom "><a class="navbar-brand" href="http://localhost:4000/">Tyler Bisk</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cornell FSAE</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/fsae/about">about</a>
+                  <a class="dropdown-item" href="/fsae/tsm">Temperature Sensing Module</a>
+                  <a class="dropdown-item" href="/fsae/glv_sb">GLV Shutdown Box</a>
+                  <a class="dropdown-item" href="/fsae/charge_sb">Charger Shutdown Box</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">iOS App Dev</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/sips">Sips</a>
+                  <a class="dropdown-item" href="/freasy">Freasy</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Projects</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/fpga">Verilog and FPGA</a>
+                  <a class="dropdown-item" href="/space_invaders">Space Invaders</a>
+                  <a class="dropdown-item" href="/ib">International Baccelauriate</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Me</a>
+          </li></ul>
+  </div>
+
+  
+
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+<div class="intro-header"></div>
+
+
+
+<div class="container-md" role="main">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <div align="center">
+
+    <img src="/assets/img/curacing.png" style="width: 30%" />
+    <p></p>
+    <h1>Charger Shutdown Box</h1>
+    <h3>(Charge SB)</h3>
+    <p></p>
+    <img src="/assets/img/chgsb.png" style="width: 78%" />
+</div>
+<div>
+    <br />
+</div>
+
+<h5 id="introduction">Introduction</h5>
+<p>The function of the CHARGE_SB is to handle shutting down the charger if a problem arises while charging.  Unlike the GLV_SB, this board is not inside the car, but rather inside the charger.  Like the GLV_SB, the board is essential because it allows us to charge the accumulator.  If a fault is detected, the board shuts down the charger.</p>
+
+<p>A board that handles charging up the battery pack safely is required by rules.  Like the GLV_SB, the CHARGE_SB must detect isolation failure and temperatures and voltages outside an allowable range, but unlike the GLV_SB it does not need to detect simultaneous braking and acceleration inputs because there is no driver when we are charging.  In fact, it is required by rules to remove the accumulator from the car in order to charge it. In the case of a failure, my board must illuminate an indicator LED and turn off the charger.</p>
+
+<h5 id="research">Research</h5>
+<p>In order for my board to detect when there is or is not a fault, the board has three inputs, each indicating the status of other systems.  If any of these signals indicate a fault or error that meet the criteria in the rules listed above, the corresponding latching circuit opens open and disables the tractive system.  Below is a list of signals that I will be monitoring, with the type of fault it outputs.</p>
+
+<ul>
+  <li>Multipurpose Enable
+    <ul>
+      <li>Open Drain [1]</li>
+    </ul>
+  </li>
+  <li>Charge Safety
+    <ul>
+      <li>Open Drain [1]</li>
+    </ul>
+  </li>
+  <li>IMD Fault
+    <ul>
+      <li>Active Low + Pull Down [2]</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The board must output a signal to the charger to tell it to turn off if any one of these three faults are triggered, in addition to turning on the corresponding fault LED.</p>
+
+<h5 id="design">Design</h5>
+<p>I am the first person to be designing a Charging Shutdown Box.  We need two total shutdown boards because one goes inside the car and one goes inside the charger.  Originally, last year’s Electrical lead planned on using a GLV shutdown box as the charger shutdown box.  However, this cannot be done without some modification because the CHARGE_SB must shut down the charger, while the GLV_SB must shut down the accumulator.  Doing so requires subtly different circuitry, but enough to warrant the development of a new board.  Additionally, there is no BSPD on the CHARGE_SB so it can be made smaller and neater.  In any case, there is more than enough reason to design an SB used strictly for charging.</p>
+
+<p>The main challenge was EV.10.4.2.c, “the charger must be turned off” if there is a fault.  The current implementation of the SB only turned off the tractive system, not some external charger.  I referred to the Brusa Technical Manual (the manual for our charger) to figure out if there was a way to turn it off.  It turns out, there is a signal called PON that Powers On the Brusa charger if it is high, and turns it off if it is low [4].  Therefore, a simple fix to my board is to include a pull-down resister before the output of my board and connect that output directly to PON.  This way, if there is a fault and the circuit is open, the resister will cause PON to be set to ground and thus turning off the charger.</p>
+
+<h5 id="board-bring-up-and-testing">Board Bring-up and Testing</h5>
+<p>After design, it is time to bring up the PCBs.  I luckily was able to bring up a couple boards in November to begin my thorough testing plan.  I already had some practice with board bring up, so I brought in someone on the team with less experience to act as my assistant so I could transfer my knowledge and mentor them.  After applying solder paste, delicately placing the parts on, and sending it through the reflow oven, it was time to test for functionality.  When connecting the board to the 12V power supply, a short was discovered between power and ground.  Initially I feared that this was due to a design flaw where I had used incorrect footprints for my components, but after analyzing my layout file I ruled that out because it used all of the same components as the GLV_SB which did not have this problem.</p>
+
+<p>I began to remove components one by one until the short was resolved.  It turned out that one of the components shipped to me had an internal fault between power and ground.  After replacing the component, the board worked exactly as intended and is ready to be connected to the charger.</p>
+
+<h5 id="revision-2">Revision 2</h5>
+<p>Although my rev1 worked, there is always room for improvement in the world of engineering.  Especially since there were six months until competition at the time of me testing my rev1, I knew I had time to make a rev2 that could potentially be even better.  I changed a few things and made major improvements on the layout by being smaller and neater.  I will update this page in January when my rev2 CHARG_SB arrives and I can test it.</p>
+
+<div align="center">
+        <h5>Charger Shutdown Box rev2</h5>
+    <img src="/assets/img/chgsbrev2.png" style="width: 78%" />
+    <p></p>
+</div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:tyler07039@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://twitter.com/tylerbisk" title="Twitter">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Twitter</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/tylerbisk" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.snapchat.com/add/tbisk123" title="Snapchat">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-snapchat-ghost fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Snapchat</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.instagram.com/tylerbisk" title="Instagram">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Instagram</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        © Tyler Bisk
+        &nbsp;&bull;&nbsp;
+      
+      2020
+
+      
+
+      
+      </p>
+      <!-- Add a second line to the footer -->
+      <p class="theme-by text-muted">
+
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+  
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/main.js"></script>
+    
+  
+
+
+
+
+
+
+
+  </body>
+</html>
