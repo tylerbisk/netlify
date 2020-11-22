@@ -4,16 +4,19 @@ title: About me
 subtitle:
 permalink: /about/
 ---
+<div align="center">
 
-Hi, my name is Tyler Bisk.  I am currently a sophomore at Cornell University's College of Engineering who is interested in all things technology.  
+    <img src="{{ "/assets/img/headshot.png" | relative_url }}" style="width: 18%; border-radius: 50%; border: 1px solid #404040"/>
 
-Alongside my passion for exploring the capabilities of computers, I am an avid chef, filmmaker, and Electrical Engineer for [Cornell Racing](http://www.cornellracing.org), in which we completely build an electric formula-style racecar each year and race in [FSAE](https://www.sae.org/attend/student-events/formula-sae-electric/about)'s competitions.
+</div>
 
-In order to explore my love for coding outside the classroom, I built this website using a combination of HTML, CSS, and a Jekyll template with Markdown.  I have also begun iOS app development and recently published my first game on the Apple App Store [here](/sips/).  Currently, I am in the final development stages of releasing my second app, which you can read about [here](/freasy/)
+I have been fascinated with all things technology from such a young age that I am so thankful for having the opportunity to study it in school and even make a career out of technology and more specifically computers.
 
-### To find out more about me please:
-- [Follow](http://www.instagram.com/tylerbisk) on **Instagram**
-- [Connect](http://www.linkedin.com/in/tylerbisk) on **Linkedin**
-- [Download](https://github.com/tylerbisk/netlify/raw/master/assets/files/TylerBiskResume.pdf) my **resume**
+Although my family and friends like to flatter me with how much I've already accomplished – pursuing my passions by building cars and websites and apps – what I have done so far is nothing compared to what I hope and plan to continue doing in the future.  Every day I learn something new, grow from that, and can apply it to my life to become a better creator and person alike.
 
-###### thanks for stopping by!
+
+Alongside the time I spend exploring the capabilities of computers, I am an avid chef, filmmaker, and tennis player.  I do these three things for no reason besides the fact that I enjoy them.  I take pride in the fact that I put 100% effort into everything I do, and cooking for my friends and family is a way to demonstrate that fact.  I am dedicated and perseverant, a fast learner, and possess interpersonal skills that allow me to work well in group project settings.
+
+At home, I have one sister who said she would be very upset if I did not mention her in my 'about me' page.  
+
+Thanks for stopping by!

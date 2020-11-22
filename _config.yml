@@ -4,7 +4,7 @@
 title: Tyler Bisk
 
 # Short description of your site
-description: My Engineering Portfolio
+description: A portfolio of my greatest projects and acheivements
 
 # Your name to show in the footer
 author: © Tyler Bisk
@@ -23,9 +23,10 @@ navbar-links:
     - Sips: "sips"
     - Freasy: "freasy"
   Other Projects:
-    - Verilog and FPGA: "fpga"
-    - Space Invaders: "space_invaders"
-    - International Baccelauriate: "ib"
+      - 🚧 Under Construction 🔨: "/"
+    # - Verilog and FPGA: "fpga"
+    # - Space Invaders: "space_invaders"
+    # - International Baccelauriate: "ib"
   Resume: "resume"
   Contact Me: "contact"
 
