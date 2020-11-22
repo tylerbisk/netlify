@@ -3,6 +3,7 @@ layout: page
 title: About me
 subtitle:
 permalink: /about/
+share-img: /assets/img/headshot.png
 ---
 <div align="center">
 
