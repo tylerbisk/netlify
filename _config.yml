@@ -19,11 +19,10 @@ navbar-links:
     - Temperature Sensing Module: "fsae/tsm"
     - GLV Shutdown Box: "fsae/glv_sb"
     - Charger Shutdown Box: "fsae/charge_sb"
-  iOS App Dev:
-    - Sips: "sips"
-    - Freasy: "freasy"
   Other Projects:
-      - 🚧 Under Construction 🔨: "/"
+      - Sips for iOS: "sips"
+      - Freasy for iOS: "freasy"
+      - Physical Zoom Buttons: "zoom_buttons"
     # - Verilog and FPGA: "fpga"
     # - Space Invaders: "space_invaders"
     # - International Baccelauriate: "ib"

@@ -4,7 +4,7 @@ title: Contact Me
 permalink: /contact/
 ---
 
-**Questions, comments, or concerns?  Drop them down below.  I will gladly address them in a timely fashion.**
+**Please drop any questions or comments you have about me or my work down below.  Thanks, Tyler.**
 
 <form accept-charset="UTF-8" action="https://getform.io/f/cb42cfb2-7b11-4a2c-8c7b-31a1e5db7c28" method="POST" enctype="multipart/form-data" target="_blank">
           <div class="form-group">
