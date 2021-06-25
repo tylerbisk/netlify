@@ -13,7 +13,8 @@ share-img: "/assets/img/glv_sb.png"
     <h1>Grounded Low Voltage Shutdown Box</h1>
     <h3>(GLV SB)</h3>
     <p></p>
-    <img src="{{ "/assets/img/glvsb.png" | relative_url }}" style="width: 98%"/>
+    <img src="{{ "/assets/img/glv_sb.png" | relative_url }}" style="width: 80%"/>
+    <img src="{{ "/assets/img/charge_sb.png" | relative_url }}" style="width: 80%"/>
 </div>
 <div>
     <br>
@@ -71,7 +72,8 @@ We were forced to go home before Thanksgiving, so only one revision of my board 
 
 I am the first person to design a Charge Shutdown Box.  The motivation behind this board was that the GLV Shutdown Box could not be accurately used for charging since the signals are fewer and slightly different than when driving.  Constraints for the charge shutdown box were mostly set by rules and the Brusa charger we are using this year.
 
-##### ARG21 Final Revision Designs
+##### ARG21 Final Revision Designs  
+
 
 ###### GLV Shutdown Box Top Level Schematic
 
@@ -137,14 +139,14 @@ Testing can be divided into three sections.  The lower the priority, the more im
         - Priority level 2 
         - The team is very confident that these work as expected
         
-###### Continuations
+##### Continuations
 
 If there were more time in the semester, I would have spent more time optimizing and organizing the layout of the board.  I have gotten the schematic to where I like it, but board bring up could be made less challenging with a more organized layout.  If there were more time, I would have liked to test whether it was necessary to have the 5V vref on the GLV SB or if the 5V signal generated from the Fusebox is steady and precise enough to not affect the BSPD in a negative way.
 
 Next year’s board designer should potentially recombine the boards into one.  The way that the charge shutdown circuit was wired this year warranted two boards, but if next year’s board designer works with powertrain, we can eliminate the need for two boards by standardizing pins and simply shorting over the BSPD when charging.
 
 
-###### References
+##### References
 
 [1]     Orion BMS, "Wiring & Installation Manual," Carol Stream, IL, 2018.
 [2]     LEM, "Automotive Current Transducer DHAB S/124," 2016.

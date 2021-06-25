@@ -48,6 +48,9 @@
 <loc>http://localhost:4000/resume/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/fsae/shutdown_box</loc>
+</url>
+<url>
 <loc>http://localhost:4000/sips/</loc>
 </url>
 <url>
