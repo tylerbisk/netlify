@@ -20,14 +20,14 @@ share-img: "/assets/img/glv_sb.png"
     <br>
 </div>
 
-##### Introduction
+#### Introduction
 The function of the GLV_SB is to safely turn off the car when a variety of conditions are met while the car is driving.  If a fault is detected somewhere within the car, the shutdown circuit will no longer be continuous.  This will cut power to the Accumulator Isolation Relays (AIRs), which will cause them to open.  This board is necessary because it ensures that if there is some sort of failure when driving, the car is immediately turned off which minimizes damage to the driver, the crew, or the car itself.
 
 The function of the CHARGE_SB is to handle shutting down the charger if a problem arises while charging.  Unlike the GLV_SB, this board is not inside the car, but rather inside the charger.  Like the GLV_SB, the board is essential because it allows us to charge the accumulator.  If a fault is detected, the board shuts down the charger.
 
 There are many rules regarding car safety and shutdown circuitry that must be complied with in order to race in competition.  In summary, my board must detect isolation failure, temperatures and voltages outside an allowable range, and simultaneous braking and acceleration inputs.  If one of these faults are detected, an indicator light must illuminate while immediately cutting power to and from the accumulator.
 
-It is my responsibility to make sure that my board exceeds what is specified by the rules in order to be confident that we will get to competition with a rules compliant car.  There are four pages of rules pertaining to the GLV Shutdown Box.  You can read about them [here](https://www.fsaeonline.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=6d9f4b51-a642-425c-bfdf-5f95b4e5e10b){:target="_blank"} if you'd like (pages 95-98).
+It is my responsibility to make sure that my board exceeds what is specified by the rules in order to be confident that we will get to competition with a rules compliant car.  There are four pages of rules pertaining to the GLV Shutdown Box.  You can read about them [here](https://www.fsaeonline.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=6d9f4b51-a642-425c-bfdf-5f95b4e5e10b) if you'd like (pages 95-98).
 
 
 ##### Research
@@ -53,15 +53,15 @@ There are three parameters that must be analyzed in order to build the Charging 
 - IMD Fault
     - Active Low [3]
     
-In order to find these values, one must:
-    **Step 1:** Analyze and study the rules for conditions in which a shutdown is required (e.g. Voltage values outside the allowable range)
-    **Step 2:** Determine what component is responsible for monitoring this condition (e.g. BMS)
-    **Step 3:** Refer to the manual of said component to find what signal is used for the fault in question (e.g. Discharge Enable)
-    **Step 4:** Further investigate as to what the expected behavior is of that signal (e.g. Open Drain) 
-    **Step 5:** Adjust latching circuit to open on fault (discussed in Section 4)
+_In order to find these values, one must:_   
+    **Step 1:** Analyze and study the rules for conditions in which a shutdown is required (e.g. Voltage values outside the allowable range)  
+    **Step 2:** Determine what component is responsible for monitoring this condition (e.g. BMS)  
+    **Step 3:** Refer to the manual of said component to find what signal is used for the fault in question (e.g. Discharge Enable)  
+    **Step 4:** Further investigate as to what the expected behavior is of that signal (e.g. Open Drain)  
+    **Step 5:** Adjust latching circuit to open on fault (discussed in Section 4)  
 
 
-##### History of the Design
+#### History of the Design
 There is a very short history of the GLV Shutdown Box.  The GLV_SB was first designed in 2019 by Nicole Lin and Jon Gao [4].  Nicole and Jon’s design first was just a BSPD, but they realized that one board could handle all of BSPD, IMD, and AMS faults.  Once they integrated those features, there were three separate latching circuits on the board on their rev2.  The idea behind their design is that in normal operation, the tractive system in is shorted with the tractive system out [4].  When there is a fault, the circuit opens which shuts down the car.  As of when Cornell was sent home for COVID, their most recent brought up design failed rules.  Nicole revised this design but did not lay it out or order a new board.  
 
 Last semester, I renamed the Shutdown Box to GLV_SB to be distinguishable from the Charging Shutdown Box that I was soon to develop.  I noticed a few errors in the design that was passed down to me from Nicole and Jon.  Namely, the signal used to check for BMS fault was incorrect.  Two signals would be required to check for a BMS fault, not just one.  Additionally, these signals are not active high like initially suspected but rather open drain, something that the original design did not account for and would fail tests if used.  There were no large changes with the latching design.  This is since their design was thoroughly researched and tested by analyzing what other teams had come up with [4].
@@ -72,7 +72,7 @@ We were forced to go home before Thanksgiving, so only one revision of my board 
 
 I am the first person to design a Charge Shutdown Box.  The motivation behind this board was that the GLV Shutdown Box could not be accurately used for charging since the signals are fewer and slightly different than when driving.  Constraints for the charge shutdown box were mostly set by rules and the Brusa charger we are using this year.
 
-##### ARG21 Final Revision Designs  
+#### ARG21 Final Revision Designs  
 
 
 ###### GLV Shutdown Box Top Level Schematic
@@ -121,7 +121,7 @@ Besides the actual change in logic, another obvious change that I made was the e
 After the potentiometers were eliminated, there were still three ways to improve: filtering signals, regulating reference voltages, and adding hysteresis to the comparators.  The idea behind the comparators on the BSPD is that if the voltage from accumulator pressure signal and brake pressure signal are both higher than the threshold value for greater than half of a second, the car must shut down.  Therefore, we need precision on that threshold value – it cannot be fluctuating or else we might shut down the car prematurely.  I use a voltage regulator, U2, to ensure that the voltage in the voltage dividers being fed into the positive terminal of the comparators is 5.00 ± 0.01 V at all times.  The signals themselves must also be filtered just as they are in the BMS Fault latch circuit.  Fluctuations in the signals can also cause unwanted faults so I use another couple of low pass filters on the input signals to the BSPD to ensure that does not happen.  A 0.1V hysteresis was added to the comparators J1 and J2.  This was added because the device that is responsible of outputting ACCUM_CURRENT and BRAKE_PRESSURE specifies that amount of uncertainty.  So, in order to be rules compliant while still accounting for the ±0.1V of uncertainty, hysteresis is added.
 
 
-##### Testing
+#### Testing
 In order to set design criteria, the data needed comes from the fault signals.  The shutdown box is three different latching circuits in series, so each of those three circuits are designed based on the type of signal coming in.  So, to ensure that the datasheets of the IMD and the BMS are accurate, we must power the IMD and BMS respectively and determine what signal is output under specific conditions.  When testing the actual board, we can simulate the signals from the IMD and BMS using power supplies.  We can continually assume using the datasheets and experimental data that the fault signals are what we expect, so we can test using simulated signals as opposed to the actual faults from the IMD and BMS.
 
 Simulating the BSPD is a lot more involved.  Brake pressure and accumulator current are both analog signals.  By rules, the BSPD must activate when braking hard but not locking the wheels, as well as delivering 5kW of power from the accumulator.  Currently, we do not have a car to test the pedals with, so there is no certainty for what voltage level the signals will be when those conditions are met.  I calculated accumulator current by doing 5000W / 360V = 13.889 A.  The signal comes from the Current Transducer, whose datasheet says that 13.889A will be approximately 2.8V [2].  Therefore, I set the threshold voltage on my board using a voltage divider to be 2.8V.  However, there is much uncertainty associated with this device, and it will take experimental data to prove this correct.  To do this, we will send 13.889 amps out of the accumulator and measure the output voltage on the LEM using a multimeter.  Additionally, we will need to test the output of the brake pressure sensor when we are braking but can still spin the wheel by hand.  It is essential that these numbers are correct because they are verified at tech inspection during competition.
@@ -129,34 +129,34 @@ Simulating the BSPD is a lot more involved.  Brake pressure and accumulator curr
 The idea behind testing is to first ensure each of the circuits open and close under the correct circumstances and stay latched until RESET is pushed.  Secondly, we must ensure that the corresponding LEDs are outputting as expected.  When there is no fault, we expect the LED output signal to be floating.  When a fault does occur, the LED signal should be 3.3V.
 
 Testing can be divided into three sections.  The lower the priority, the more important it is. 
-    - Testing the boards themselves with the assumed fault signals to ensure that it is opening and closing the shutdown loop expectedly.
-        - Priority level 0
-        - If the board does not actually cut power to/from the accumulator when it could result in catastrophic failure
-    - Testing the brake pressure and accumulator current signals to verify values
-        - Priority level 1
-        - Inaccurate values may result in us failing tech, but the values are very easily adjusted by replacing resistors, and the error likely on the order of decivolts
-    - Testing the IMD and BMS faults
-        - Priority level 2 
-        - The team is very confident that these work as expected
+- Testing the boards themselves with the assumed fault signals to ensure that it is opening and closing the shutdown loop expectedly.
+    - Priority level 0
+    - If the board does not actually cut power to/from the accumulator when it could result in catastrophic failure
+- Testing the brake pressure and accumulator current signals to verify values
+    - Priority level 1
+    - Inaccurate values may result in us failing tech, but the values are very easily adjusted by replacing resistors, and the error likely on the order of decivolts
+- Testing the IMD and BMS faults
+    - Priority level 2 
+    - The team is very confident that these work as expected  
         
-##### Continuations
+#### Continuations
 
 If there were more time in the semester, I would have spent more time optimizing and organizing the layout of the board.  I have gotten the schematic to where I like it, but board bring up could be made less challenging with a more organized layout.  If there were more time, I would have liked to test whether it was necessary to have the 5V vref on the GLV SB or if the 5V signal generated from the Fusebox is steady and precise enough to not affect the BSPD in a negative way.
 
 Next year’s board designer should potentially recombine the boards into one.  The way that the charge shutdown circuit was wired this year warranted two boards, but if next year’s board designer works with powertrain, we can eliminate the need for two boards by standardizing pins and simply shorting over the BSPD when charging.
 
 
-##### References
+#### References
 
-[1]     Orion BMS, "Wiring & Installation Manual," Carol Stream, IL, 2018.
-[2]     LEM, "Automotive Current Transducer DHAB S/124," 2016.
-[3]     Bender GmbH & Co. KG, "ISOMETER IR155-3203/IR155-3204," Gruenberg, Germany, 2018.
-[4]     N. Lin and J. Gao, "ARG20_Fa19_TechnicalReport_Electronics_Control_Unit_jg992_nl392," 2019.
-[5]     TE Connectivity, "AMPSEAL 14 POS RIGHT ANGLE HEADER ASSY," Schaffhausen, Switzerland, 2020.
-[6]     Brusa, "Technical Data and Startup," Munich, Germany, 2012.
-[7]     Texas Instruments, "Single 2-input Positive-NOR Gate," Dallas, Texas, 2003.
-[8]     T. Bisk, "BSPD Calculations," Ithaca, NY, 2021.
-[9]     N. Lin, "ARG20_Sp20_TechnicalReport_Electrical_ECUSBFW," 2020.
+[1]     Orion BMS, "Wiring & Installation Manual," Carol Stream, IL, 2018.  
+[2]     LEM, "Automotive Current Transducer DHAB S/124," 2016.  
+[3]     Bender GmbH & Co. KG, "ISOMETER IR155-3203/IR155-3204," Gruenberg, Germany, 2018.  
+[4]     N. Lin and J. Gao, "ARG20_Fa19_TechnicalReport_Electronics_Control_Unit_jg992_nl392," 2019.  
+[5]     TE Connectivity, "AMPSEAL 14 POS RIGHT ANGLE HEADER ASSY," Schaffhausen, Switzerland, 2020.  
+[6]     Brusa, "Technical Data and Startup," Munich, Germany, 2012.  
+[7]     Texas Instruments, "Single 2-input Positive-NOR Gate," Dallas, Texas, 2003.  
+[8]     T. Bisk, "BSPD Calculations," Ithaca, NY, 2021.  
+[9]     N. Lin, "ARG20_Sp20_TechnicalReport_Electrical_ECUSBFW," 2020.  
 
 
 
