@@ -30,10 +30,10 @@ There are many rules regarding car safety and shutdown circuitry that must be co
 It is my responsibility to make sure that my board exceeds what is specified by the rules in order to be confident that we will get to competition with a rules compliant car.  There are four pages of rules pertaining to the GLV Shutdown Box.  You can read about them [here](https://www.fsaeonline.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=6d9f4b51-a642-425c-bfdf-5f95b4e5e10b) if you'd like (pages 95-98).
 
 
-##### Research
+#### Research
 There are three parameters that must be analyzed in order to build the Charging Shutdown Box and five for the Grounded Low Voltage Shutdown Box.  Each of these parameters are input signals to the shutdown boxes which indicate the status of other systems.  If any of these signals indicate a fault or error that meet the criteria in the rules listed above, the corresponding latching circuit opens open and disables the tractive system (GLV_SB) or the charger (CHARGE_SB).  Below is a list of signals that will be monitored, with the type of fault it outputs.
 
-###### GLV_SB Fault Signals
+__GLV_SB Fault Signals__  
 - Multipurpose Enable
     - Open Drain [1]
 - Discharge Enable
@@ -45,7 +45,7 @@ There are three parameters that must be analyzed in order to build the Charging 
 - IMD Fault 
     - Active Low [3]
 
-###### CHARGE_SB Fault Signals
+__CHARGE_SB Fault Signals__  
 - Multipurpose Enable
      - Open Drain [1]
 - Charge Safety
