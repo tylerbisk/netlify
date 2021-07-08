@@ -10,8 +10,8 @@ share-img: "/assets/img/glv_sb.png"
 
     <img src="{{ "/assets/img/curacing.png" | relative_url }}" style="width: 30%"/>
     <p></p>
-    <h1>Grounded Low Voltage Shutdown Box</h1>
-    <h3>(GLV SB)</h3>
+    <h1>ARG21 Shutdown Box</h1>
+    <h3>Tyler Bisk</h3>
     <p></p>
     <img src="{{ "/assets/img/glv_sb.png" | relative_url }}" style="width: 80%"/>
     <img src="{{ "/assets/img/charge_sb.png" | relative_url }}" style="width: 80%"/>
