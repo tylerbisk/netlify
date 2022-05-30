@@ -1,6 +1,7 @@
 ---
-layout: page2
-title: Physical Zoom Mute & Video Buttons
+layout: page
+title: Physical Zoom Buttons
+subtitle: Buttons to Control Microphone & Camera
 permalink: /zoom_buttons
 share-img: "https://i.imgur.com/aNniMuV.png"
 ---
@@ -113,8 +114,5 @@ We also used the following Python libraries:
 * [struct](https://docs.python.org/3/library/struct.html) to decode the data from the USB port
 * [keyboard](https://pypi.org/project/keyboard/) to use python to control the computer's keyboard and send keyboard shortcuts
 
-***
 
-## Work Distribution
-The work distribution was very equal in terms of hours spent on the project. Luckily, both partners were in the Ithaca area for the duration of the project, so work was done in person. We worked on the project throughout four five-hour, in-person meetings. During in-person work sessions, Tyler spent time designing the circuit and soldering, splicing, and pinning wires, while Ashok worked to research and write code for how the board would ultimately communicate with Zoom, and worked to build a casing for the buttons. Both partners worked on main.c, utils.c, zoom.py, and zoom.sh equally.  The report and video were co-written and co-produced by Tyler and Ashok.
 

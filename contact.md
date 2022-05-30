@@ -4,7 +4,9 @@ title: Contact Me
 permalink: /contact/
 ---
 
-**Please drop any questions or comments you have about me or my work down below.  Thanks, Tyler.**
+**Please reach me via email at tyler07039@gmail.com.**
+
+<!-- **Please drop any questions or comments you have about me or my work down below.  Thanks, Tyler.**
 
 <form accept-charset="UTF-8" action="https://getform.io/f/cb42cfb2-7b11-4a2c-8c7b-31a1e5db7c28" method="POST" enctype="multipart/form-data" target="_blank">
           <div class="form-group">
@@ -31,4 +33,4 @@ permalink: /contact/
 
           <!-- <hr> -->
           <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </form> -->

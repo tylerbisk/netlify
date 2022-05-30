@@ -4,7 +4,7 @@
 title: Tyler Bisk
 
 # Short description of your site
-description: A portfolio of my greatest projects and acheivements
+description: A portfolio of my greatest projects and achievements
 
 # Your name to show in the footer
 author: © Tyler Bisk
@@ -16,17 +16,23 @@ navbar-links:
 # Blog: "blog"
   Cornell FSAE:
     - about: "fsae/about"
-    - Temperature Sensing Module: "fsae/tsm"
-    - Shutdown Box: "fsae/shutdown_box"
-  Other Projects:
-      - Sips for iOS: "sips"
-      - Freasy for iOS: "freasy"
+    - Temperature Sensing Module (2020): "fsae/tsm"
+    - Shutdown Box (2021): "fsae/shutdown_box"
+    - Electrical Lead (2022): "fsae/electrical_lead"
+  Software:
+      - Sips: "sips"
+      - Freasy: "freasy"
+      # - Canny Edge Detector: "computer_vision/edge"
+      # - MOPS Feature Detector: "computer_vision/mops"
+  # - Space Invaders: "space_invaders"
+  Micro-controllers:
       - Physical Zoom Buttons: "zoom_buttons"
-    # - Verilog and FPGA: "fpga"
-    # - Space Invaders: "space_invaders"
-    # - International Baccelauriate: "ib"
+      - Autonomous Maze-Solving Robot: "3400_final"
+      - Bird Song Synthesizer: "ece4760/lab1"
+      - PID Motor Controller: "ece4760/lab3"
+      - PIC32 Video Game: "ece4760/final"
   Resume: "resume"
-  Contact Me: "contact"
+  #Contact Me: "contact"
 
 # --- Logo --- #
 
@@ -66,7 +72,7 @@ social-network-links:
 #  twitch: yourname
 #  yelp: yourname
 #  telegram: yourname
-  calendly: tylerbisk
+  #calendly: tylerbisk
 
 # --- General options --- #
 
