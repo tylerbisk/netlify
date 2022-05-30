@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Servos and Ultrasonic Sensors</title>
+
+  
+  <meta name="author" content="© Tyler Bisk">
+  
+
+  
+  <meta name="description" content="Autonomous Maze Solving Robot Part 1">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Tyler Bisk - A portfolio of my greatest projects and achievements" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+       <link rel="shortcut icon" type="image/png" href="/assets/img/favico.png">
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+       <link rel="shortcut icon" type="image/png" href="/assets/img/favico.png">
+    
+  
+
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Servos and Ultrasonic Sensors">
+  
+
+   
+  <meta property="og:description" content="Autonomous Maze Solving Robot Part 1">
+  
+
+
+  <meta property="og:type" content="website">
+
+  
+  <meta property="og:url" content="http://localhost:4000/3400/part1">
+  <link rel="canonical" href="http://localhost:4000/3400/part1">
+  
+
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@tylerbisk">
+  <meta name="twitter:creator" content="@tylerbisk">
+
+  
+  <meta name="twitter:title" content="Servos and Ultrasonic Sensors">
+  
+
+  
+  <meta name="twitter:description" content="Autonomous Maze Solving Robot Part 1">
+  
+
+  
+
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom "><a class="navbar-brand" href="/">Tyler Bisk</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cornell FSAE</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/fsae/about">about</a>
+                  <a class="dropdown-item" href="/fsae/tsm">Temperature Sensing Module (2020)</a>
+                  <a class="dropdown-item" href="/fsae/shutdown_box">Shutdown Box (2021)</a>
+                  <a class="dropdown-item" href="/fsae/electrical_lead">Electrical Lead (2022)</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Software</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/sips">Sips</a>
+                  <a class="dropdown-item" href="/freasy">Freasy</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Micro-controllers</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/zoom_buttons">Physical Zoom Buttons</a>
+                  <a class="dropdown-item" href="/3400/home">Autonomous Maze-Solving Robot</a>
+                  <a class="dropdown-item" href="/ece4760/lab1">Bird Song Synthesizer</a>
+                  <a class="dropdown-item" href="/ece4760/lab3">PID Motor Controller</a>
+                  <a class="dropdown-item" href="/ece4760/final">PIC32 Video Game</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/resume">Resume</a>
+          </li></ul>
+  </div>
+
+  
+
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="page-heading">
+          <h1>Servos and Ultrasonic Sensors</h1>
+      
+        
+            <hr class="small">
+            <span class="page-subheading">Autonomous Maze Solving Robot Part 1</span>
+      
+      
+      
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container-md" role="main">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <h3 id="objective">Objective</h3>
+<ol>
+  <li>Build the physical robot</li>
+  <li>Callibrate the servos</li>
+  <li>Use ultrasonic sensors to dictate robot movement</li>
+</ol>
+
+<h3 id="the-body">The Body</h3>
+<p>The robot itself is composed of a metal housing, three wheels, two servos, two battery packs, a breadboard, wires, miscellaneous sensors, and an Arduino Nano.</p>
+
+<p>The body of the robot was constructed by affixing a castor wheel to the front of the robot and two wheels to either side of the back of the robot.  The castor wheel can spin freely while the rear wheels are each attached to the gear of a servo.</p>
+
+<p>Once the three wheels were attached, the two battery packs were velcroed to the top of the robot.  One battery pack consists of three AA batteries in series which will ultimately power the servos while a 9V battery will power the Arduino.  The breadboard which houses the Arduino and three ultrasonic sensors (US) is affixed on top of the batteries.  One US faces front, one faces right, and one faces left.</p>
+
+<div align="center">
+    <b>Figure 1: The Completed Robot (side view) </b>
+    <br />
+    <img src="/assets/img/3400/lab1_robot.jpg" style="width: 58%" />
+    <p></p>
+    <b>Figure 2: The Completed Robot (front view) </b>
+    <br />
+    <img src="/assets/img/3400/lab1_robot2.jpg" style="width: 58%" />
+    <p></p>
+</div>
+
+<h3 id="the-servos">The Servos</h3>
+<p>The servos each need to be connected to power, ground, their signal input to  a Pulse Width Modulation output pin on the Arduino.  The duty cycle of the PWM pin determines how fast and in which direction to spin the motor.  At a duty cycle of 50%, or writing <code class="language-plaintext highlighter-rouge">90</code> to the servo from the Arduino <code class="language-plaintext highlighter-rouge">Servo</code> library should make the servo motor stop.</p>
+<div align="center">
+    <b>Figure 3: Voltage vs Time of Different Duty Cycles </b>
+    <br />
+    <img src="https://cdn.sparkfun.com/assets/f/9/c/8/a/512e869bce395fbc64000002.JPG" style="width: 48%" />
+</div>
+<div align="right">
+[1]
+</div>
+<p>90 was written to both servos, then using a screwdriver the servo was calibrated by adjusting a potentiometer until the servo stopped moving.</p>
+
+<h3 id="the-first-drive">The First Drive</h3>
+<p>To demonstrate that our servos and frame were set up and calibrated correctly, we demonstrated that the robot could move around.  The goal was to get the robot to move forward, turn left, turn right, and come back to its initial position - almost like a driver’s test.</p>
+
+<p>Once the servos were calibrated, the robot could predictably move around.  By writing positions to the servos followed by a delay in milliseconds, it was possible to get the robot to do the turns and movements we desired.</p>
+
+<p>After a little trial and error with servo positions and delay times to get sharper turns and straighter ‘forwards’, the servo was able to loop through going forward, turning around, coming back, and reorienting itself where it started.</p>
+
+<h3 id="the-ultrasonic-sensors">The Ultrasonic Sensors</h3>
+<p>The ultrasonic sensors have 4 pins each: Vcc (5V), ground, trigger, and echo.</p>
+<div align="center">
+    <b>Figure 4: The Ultrasonic Sensor</b>
+    <br />
+    <img src="/assets/img/3400/us_sensor.jpg" style="width: 28%" />
+</div>
+<div align="right">
+[2]
+</div>
+<p>When a pulse is sent to the trigger pin of the sensor, the sensor sends out ultrasonic pulses.  When those pulses bounce off of an object and come back, the sensor outputs a pulse on the echo pin.  The time between when the trigger was sent and the echo was received can be used to calculate how far away the object is using the speed of sound.</p>
+
+<p>The use of three US for our robot would theoretically require six digital pins from the Arduino: three triggers and three echos.  However, this is too much to sacrifice because other sensors will require these digital pins in the future.  One solution, which is being done for lab1, is to tie all three triggers together and have separate echos.  Then, when an echo is received on a pin, an interrupt service routine is used to distinguish which echo is for each of the front, left, and right sensors.  The distance from the object is then calculated and stored in centimeters.</p>
+
+<p>The distances are then printed to the serial monitor in the format:<br />
+<code class="language-plaintext highlighter-rouge">Left Sensor (cm) :: Front Sensor (cm) :: Right Sensor (cm)</code><br />
+As to not overflow the serial monitor with too many numbers, we print only every fourth set of distances.  An example serial monitor snippet when all three sensors are connected and the robot is moving forward reads:<br />
+<code class="language-plaintext highlighter-rouge">20.2 :: 14.3 :: 10.1</code><br />
+<code class="language-plaintext highlighter-rouge">20.3 :: 12.9 :: 10.0</code><br />
+<code class="language-plaintext highlighter-rouge">20.1 :: 10.5 :: 10.2</code><br />
+The distance to the front sensor is steadily decreasing while the distance to the left and the right remains generally constant.</p>
+
+<h3 id="the-maze">The Maze</h3>
+<p>Using the three US sensors, the goal was to accurately navigate the below maze:</p>
+<div align="center">
+    <b>Figure 5: The Maze Setup</b>
+    <br />
+    <img src="/assets/img/3400/maze_us.png" style="width: 68%" />
+</div>
+<div align="right">
+[3]
+</div>
+
+<p>The robot was able to navigate the entire maze without user input.  By using a switch statement with a set of cases signifying states, the maze can be navigated over and over again.  The robot begins by maintaining a constant distance from the right wall.  This is known as the <code class="language-plaintext highlighter-rouge">right wall follow</code> state.  When its front sensor reads a value that is too small, it switches into the <code class="language-plaintext highlighter-rouge">turn left</code> state and turns left 90º.  In order to completely navigate the maze, we require six unique states:</p>
+<ol>
+  <li>Right wall follow (go straight and follow the right wall)</li>
+  <li>Left wall follow (go straight and follow the left wall)</li>
+  <li>Turn left 90º</li>
+  <li>Turn right 90º</li>
+  <li>Turn right 180º</li>
+  <li>Turn left 540º (upon exiting the maze)</li>
+</ol>
+
+<p>All the while, the robot prints to the serial monitor what it is doing and where (point 1, 2, 3, or 4 in Figure 4) it is.  For example, after reaching point 4, the serial monitor would begin to read:<br />
+<code class="language-plaintext highlighter-rouge">Stopped at Position 4 facing South, 15.2 :: 8.0 :: 10.0</code><br />
+<code class="language-plaintext highlighter-rouge">Turning Around</code><br />
+<code class="language-plaintext highlighter-rouge">Moving to Position 3</code><br />
+<code class="language-plaintext highlighter-rouge">...</code></p>
+
+<h3 id="the-final-demo-video">The Final Demo (Video)</h3>
+
+<p>After setting up the maze and flashing the code, we set down our robot at Position 1 and hit record.  The robot successfully navigated the maze with no assistance and then came back to its starting point, ready to run again.</p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y-pzxhj4eNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p></p>
+</div>
+
+<h3 id="resources">Resources</h3>
+<p>[1] <em>Duty Cycles</em>, https://cdn.sparkfun.com/assets/f/9/c/8/a/512e869bce395fbc64000002.JPG, accessed Sept 26, 2021.<br />
+[2] <em>Ultrasonic Distance Sensor</em>, from https://cdn.sparkfun.com//assets/parts/1/3/5/0/815569-Ultrasonic_Distance_Sensor_-_HC-SR04-01a.jpg, accessed Sept 26, 2021.<br />
+[3] C. Poitras, <em>Intro to the Arduino, Servos, and Sensors</em>, ECE 3400, September 7, 2021.</p>
+
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:tyler07039@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/tylerbisk" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://twitter.com/tylerbisk" title="Twitter">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Twitter</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/tylerbisk" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        © Tyler Bisk
+        &nbsp;&bull;&nbsp;
+      
+      2022
+
+      
+
+      
+      </p>
+      <!-- Add a second line to the footer -->
+      <p class="theme-by text-muted">
+
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+  
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/main.js"></script>
+    
+  
+
+
+
+
+
+
+
+  </body>
+</html>

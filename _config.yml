@@ -27,7 +27,7 @@ navbar-links:
   # - Space Invaders: "space_invaders"
   Micro-controllers:
       - Physical Zoom Buttons: "zoom_buttons"
-      - Autonomous Maze-Solving Robot: "3400_final"
+      - Autonomous Maze-Solving Robot: "3400/home"
       - Bird Song Synthesizer: "ece4760/lab1"
       - PID Motor Controller: "ece4760/lab3"
       - PIC32 Video Game: "ece4760/final"
