@@ -60,6 +60,9 @@
 <loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/fiji</loc>
+</url>
+<url>
 <loc>http://localhost:4000/freasy/terms_of_service/</loc>
 </url>
 <url>
@@ -96,7 +99,11 @@
 <loc>http://localhost:4000/zoom_buttons</loc>
 </url>
 <url>
+<loc>http://localhost:4000/Lab%203%20Report%20(4760).pdf</loc>
+<lastmod>2022-06-10T00:12:21-07:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/assets/files/Tyler%20Bisk%20-%20Resume.pdf</loc>
-<lastmod>2022-04-12T13:45:20-07:00</lastmod>
+<lastmod>2022-06-10T00:20:08-07:00</lastmod>
 </url>
 </urlset>

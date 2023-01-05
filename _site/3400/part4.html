@@ -11,7 +11,7 @@
   
 
   
-  <meta name="description" content="Autonomous Maze Solving Robot Part 1">
+  <meta name="description" content="Autonomous Maze Solving Robot Part 4 (Final)">
   
 
   <link rel="alternate" type="application/rss+xml" title="Tyler Bisk - A portfolio of my greatest projects and achievements" href="http://localhost:4000/feed.xml">
@@ -69,7 +69,7 @@
   
 
    
-  <meta property="og:description" content="Autonomous Maze Solving Robot Part 1">
+  <meta property="og:description" content="Autonomous Maze Solving Robot Part 4 (Final)">
   
 
 
@@ -93,7 +93,7 @@
   
 
   
-  <meta name="twitter:description" content="Autonomous Maze Solving Robot Part 1">
+  <meta name="twitter:description" content="Autonomous Maze Solving Robot Part 4 (Final)">
   
 
   
@@ -177,7 +177,7 @@
       
         
             <hr class="small">
-            <span class="page-subheading">Autonomous Maze Solving Robot Part 1</span>
+            <span class="page-subheading">Autonomous Maze Solving Robot Part 4 (Final)</span>
       
       
       
@@ -204,7 +204,7 @@
 </ol>
 
 <h3 id="the-hardware">The Hardware</h3>
-<p>By the beginning of lab 4, the robot already had all the necessary hardware for navigating a maze, detecting treasures and walls, and generating an FFT using a microphone.  The base station already could output given <code class="language-plaintext highlighter-rouge">unsigned ints</code> (range of 0 - 65,535) to the 7-segment display.  Now, to tie the two together, we needed an RF transceiver to transmit and receive data between the two.  The transceiver is affixed to a PCB with soldered headers, as shown in Figure 1.</p>
+<p>By the beginning of part 4, the robot already had all the necessary hardware for navigating a maze, detecting treasures and walls, and generating an FFT using a microphone.  The base station already could output given <code class="language-plaintext highlighter-rouge">unsigned ints</code> (range of 0 - 65,535) to the 7-segment display.  Now, to tie the two together, we needed an RF transceiver to transmit and receive data between the two.  The transceiver is affixed to a PCB with soldered headers, as shown in Figure 1.</p>
 <div align="center">
     <b>Figure 1: RF Transceiver and PCB</b>
     <br />
@@ -225,7 +225,7 @@
 </div>
 
 <h3 id="the-fft">The FFT</h3>
-<p>The first thing that needs to happen in the demo is the robot must begin moving  when it hears a 950 Hz tone.  It sits ans waits at the beginning of the maze until such a noise is heard.  We already had code from lab 3 to generate an FFT, so using that code we generated a plot of a 950 Hz signal.</p>
+<p>The first thing that needs to happen in the demo is the robot must begin moving  when it hears a 950 Hz tone.  It sits ans waits at the beginning of the maze until such a noise is heard.  We already had code from part 3 to generate an FFT, so using that code we generated a plot of a 950 Hz signal.</p>
 <div align="center">
     <b>Figure 3: FFT of a 950 Hz Signal</b>
     <br />
@@ -264,12 +264,12 @@
     <p></p>
 </div>
 
-<p>The code and method for detecting treasures is exactly the same as it was in lab 2 using analog compare and phototransistors.  However, in lab 2 the communication of a detected treasure was done via the serial monitor, whereas in lab 4 we must use our base station to display the treasure frequency.  Using the built-in Arduino RF library, we can simply swap out a print statement for an RF statement.  In order to make sure our robot and base station are paired, we set the pipe numbers based on our lab section and group number.  Our robot sent data on pipe 8 and received acknowledgements from the base station on pipe 9.</p>
+<p>The code and method for detecting treasures is exactly the same as it was in part 2 using analog compare and phototransistors.  However, in part 2 the communication of a detected treasure was done via the serial monitor, whereas in part 4 we must use our base station to display the treasure frequency.  Using the built-in Arduino RF library, we can simply swap out a print statement for an RF statement.  In order to make sure our robot and base station are paired, we set the pipe numbers accordingly.  Our robot sent data on pipe 8 and received acknowledgements from the base station on pipe 9.</p>
 
 <p>On the base station, the <code class="language-plaintext highlighter-rouge">number_to_display</code> to the 7 segment display is no longer a constant, but instead an <code class="language-plaintext highlighter-rouge">unsigned int</code> that is set by the packet (the treasure frequency) received via RF.  When the robot is not detecting treasures the robot is not sending any packets, so the frequency is displayed on the base station until the robot sees another treasure.</p>
 
 <h3 id="the-led">The LED</h3>
-<p>When the robot finds two <em>distinct</em> treasures (two treasures whose frequencies are greater than 999 Hz apart), it has finished the maze.  We signify this result by stopping the servos and blinking the on-board LED.  The on-board LED is <code class="language-plaintext highlighter-rouge">D13</code> on the nano, which is also being used for RF.  Once we disable RF, it is possible to use non-blocking statements to write high and low to input D13 every 500 ms to blink the LED at 1 Hz.  We were able to test this using a function generator wired to an LED, as in lab 2.</p>
+<p>When the robot finds two <em>distinct</em> treasures (two treasures whose frequencies are greater than 999 Hz apart), it has finished the maze.  We signify this result by stopping the servos and blinking the on-board LED.  The on-board LED is <code class="language-plaintext highlighter-rouge">D13</code> on the nano, which is also being used for RF.  Once we disable RF, it is possible to use non-blocking statements to write high and low to input D13 every 500 ms to blink the LED at 1 Hz.  We were able to test this using a function generator wired to an LED, as in part 2.</p>
 
 <div align="center">
     <b>Figure 6: Serial Monitor of Treasure Detection and LED Blink</b>
@@ -287,7 +287,7 @@
     <p></p>
 </div>
 
-<p>At the demo we demonstrated all of the hard work we had put into the lab.  Our robot jumped into action as soon as the appropriate note in ‘happy birthday’ was reached.  Then, although the robot hit 3 walls throughout its journey, the robot navigated to every square of the maze rather quickly.  Carl was so impressed that he took a video of it in action.  It was very rewarding to finally get to the demo after 5 or 6 weeks of hard work on lab 4 alone, plus the work done in labs 1, 2, and 3.</p>
+<p>At the demo we demonstrated all of the hard work we had put into the project.  Our robot jumped into action as soon as the appropriate note in ‘happy birthday’ was reached.  Then, although the robot hit 3 walls throughout its journey, the robot navigated to every square of the maze rather quickly.  Carl was so impressed that he took a video of it in action.  It was very rewarding to finally get to the demo after 5 or 6 weeks of hard work on part 4 alone, plus the work done in parts 1, 2, and 3.</p>
 
 <h4 id="video-of-final-demo">Video of Final Demo</h4>
 <div align="center">
