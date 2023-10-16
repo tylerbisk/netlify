@@ -29,5 +29,6 @@ After finalizing and releasing the game, I realized how far I had come and how m
 ##### Actions:
 - Download Sips on the iOS App Store [here](https://apps.apple.com/us/app/id1511594732){:target="_blank"}
 - Read about Sips in the article "[*Hidden Gems: Top Card Games To Play On IOS*](https://gameskeys.net/hidden-gems-top-card-games-to-play-on-ios/#Sips){:target="_blank"}"  
+- View the positive review of Sips on "[*freeappsforme*](https://freeappsforme.com/sips-drink-with-friends-app-review/){:target="_blank"}"
 - Sip's [Privacy Policy](/sips/privacy/)  
 - Sip's [Support and FAQ](/sips/support)
