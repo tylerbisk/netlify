@@ -2,18 +2,18 @@
 layout: page2
 title: Temperature Sensing Module
 permalink: /fsae/tsm
-share-img: "/assets/img/tsmlay.png"
+share-img: "/assets/img/fsae/tsmlay.png"
 ---
 
 
 <div align="center">
 
-    <img src="{{ "/assets/img/curacing.png" | relative_url }}" style="width: 30%"/>
+    <img src="{{ "/assets/img/fsae/curacing.png" | relative_url }}" style="width: 30%"/>
     <p></p>
     <h1>Temperature Sensing Module</h1>
     <h3>(TSM)</h3>
     <p></p>
-    <img src="{{ "/assets/img/tsmlay.png" | relative_url }}" style="width: 78%"/>
+    <img src="{{ "/assets/img/fsae/tsmlay.png" | relative_url }}" style="width: 78%"/>
 </div>
 <div>
     <br>
@@ -34,7 +34,7 @@ As a team, we ended up deciding that monitoring 60% of the cells was optimal for
 <div align="center">
     <p></p>
     <h5>TSM Schematic</h5>
-    <img src="{{ "/assets/img/tsmskmtc.png" | relative_url }}" style="width: 100%"/>
+    <img src="{{ "/assets/img/fsae/tsmskmtc.png" | relative_url }}" style="width: 100%"/>
     <p></p>
 </div>
 

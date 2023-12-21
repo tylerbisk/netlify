@@ -3,11 +3,11 @@ layout: page_pink
 title: Freasy
 subtitle: Free Stuff Made Easy
 permalink: /freasy/
-share-img: "/assets/img/freasyicon.png"
+share-img: "/assets/img/freasy/freasyicon.png"
 ---
 <div align="center">
 
-    <img src="{{ 'assets/img/Freasylg.png' | relative_url }}" style="width: 90%"/>
+    <img src="{{ 'assets/img/freasy/Freasylg.png' | relative_url }}" style="width: 90%"/>
     <h1>Free Stuff Made Easy</h1>
 </div>
 

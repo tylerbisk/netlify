@@ -60,9 +60,6 @@
 <loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/fiji</loc>
-</url>
-<url>
 <loc>http://localhost:4000/freasy/terms_of_service/</loc>
 </url>
 <url>
@@ -75,7 +72,13 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/meng/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/resume/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/scoreboard/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/fsae/shutdown_box</loc>
@@ -85,6 +88,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/sips/support</loc>
+</url>
+<url>
+<loc>http://localhost:4000/pool</loc>
 </url>
 <url>
 <loc>http://localhost:4000/tags/</loc>

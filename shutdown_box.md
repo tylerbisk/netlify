@@ -2,19 +2,19 @@
 layout: page2
 title: Shutdown Box
 permalink: /fsae/shutdown_box
-share-img: "/assets/img/glv_sb.png"
+share-img: "/assets/img/fsae/glv_sb.png"
 ---
 
 
 <div align="center">
 
-    <img src="{{ "/assets/img/curacing.png" | relative_url }}" style="width: 30%"/>
+    <img src="{{ "/assets/img/fsae/curacing.png" | relative_url }}" style="width: 30%"/>
     <p></p>
     <h1>ARG21 Shutdown Box</h1>
     <h3>Tyler Bisk</h3>
     <p></p>
-    <img src="{{ "/assets/img/glv_sb.png" | relative_url }}" style="width: 80%"/>
-    <img src="{{ "/assets/img/charge_sb.png" | relative_url }}" style="width: 80%"/>
+    <img src="{{ "/assets/img/fsae/glv_sb.png" | relative_url }}" style="width: 80%"/>
+    <img src="{{ "/assets/img/fsae/charge_sb.png" | relative_url }}" style="width: 80%"/>
 </div>
 <div>
     <br>
@@ -77,7 +77,7 @@ I am the first person to design a Charge Shutdown Box.  The motivation behind th
 
 ###### GLV Shutdown Box Top Level Schematic
 
-![](/assets/img/glv_sb_toplevel.png)
+![](/assets/img/fsae/glv_sb_toplevel.png)
 
 Seen above, there are three green boxes, each representing one latching circuit.  They are wired in series, so that if any of the three latching circuits is opened, there is no current from TRACTIVE_SYSTEM_IN to TRACTIVE_SYSTEM_OUT.  Each of these three latching circuits have the same logic to handle opening and staying open, but the logic before the relays looks quite different from one another and depends entirely on the fault being received.  Each latching circuit has two normally open relays, one Single Pole Single Throw (SPST) and one Double Pole Single Throw (DPST), as well as a normally closed SPST relay to turn on an LED when it is faulted.  Usually, when there is no fault, the DPST relay is closed and will remain closed, meaning there is a connection between tractive system in and tractive system out.  When there is a fault, the N-Channel MOSFET prohibits current from flowing and therefore causes the relays to go to their “normal” states.  This is open for the DPST, causing the shutdown circuit to open, while it is closed for the LED latch, causing the LED to receive power and turn on.  The latches will remain in their normal state until the Normally Open (NO) SPST relay gets a reset signal causing it to close back up, restoring the circuit to the state that allows current to flow to and from the accumulator.  Due to the way the circuit is designed, even when the fault is resolved the circuit still latches until the reset signal is received – functionality that is mandated by the rules.
 
@@ -85,19 +85,19 @@ Additionally, seen in the top-level, there is a 12V to 3V3 DC-DC converter that 
 
 ###### Charge Shutdown Box Top Level Schematic
 
-![](/assets/img/charge_sb_toplevel.png)
+![](/assets/img/fsae/charge_sb_toplevel.png)
 
 The major differences between the GLV SB and the Charge SB is one, the fact that the BSPD is missing, two, that DISCHG_EN is replaced with CHG_SFTY, and three, the addition of a pull-down resistor at the end of the circuit.  The motivation behind the resistor was EV.10.4.2.c, “the charger must be turned off” if there is a fault.  After referring to the Brusa Technical Manual, it was evident that there was a pin to do just what we wanted called PON [6].  PON powers on the Brusa charger if it is high and turns it off if it is low [6].  Therefore, a simple fix to the board is to include a pull-down resister before the output of my board and connect that output directly to PON.  This way, if there is a fault and the circuit is open, the resister will cause PON to be set to ground and thus turning off the charger.
 
 ###### IMD Fault
 
-![](/assets/img/imd_fault.png)
+![](/assets/img/fsae/imd_fault.png)
 
 Of the three circuits, IMD fault is by far the easiest.  There is a single fault signal for the IMD, making the logic straightforward.  During normal operation the IMD outputs 10V which keeps the MOSFET opened, and when it is faulting the MOSFET closes which causes the shutdown circuit to fault as described above.  No modifications have been made to this circuit since Rev 1.
 
 ###### BMS Fault
 
-![](/assets/img/bms_fault.png)
+![](/assets/img/fsae/bms_fault.png)
 
 
 Before I began work on the Shutdown Box, the incorrect assumption was made that the BMS_FAULT signal was active high.  Furthermore, only one general BMS_FAULT signal was assumed, when after analyzing the Orion BMS datasheet there are two different fault outputs on the Orion that pertain to our needs – not just one.  These faults are open drain, so it was necessary to add pull up resistors to these signals.  Since we want the signal on fault to be low when entering the MOSFET, I used a logical NOR gate.  
@@ -108,7 +108,7 @@ The second change that was made from revs 1 and 2 was the voltage levels of the 
 
 ###### BSPD Fault
 
-![](/assets/img/bspd_fault.png)
+![](/assets/img/fsae/bspd_fault.png)
 
 The BSPD must fault if both the if the brakes are pressed hard while 13.89 amperes of current are being drawn from the accumulator for more than 0.5 seconds, or if there is a short or an open in either of the two input signals.  Since the signals are analog, comparators are used.  They check to see if the input is above a certain value, and if so, the output of the comparator flips.  There are seven comparators – four are used to check for open and short, two others are NOR’d together for the actual brake sensing plausibility.  That output is fed through an RC time delay of 0.5 seconds which will trigger the seventh and final comparator, causing a fault.  There is a diode OR which means that if any of the parts are faulting, the entire system will fault.
 

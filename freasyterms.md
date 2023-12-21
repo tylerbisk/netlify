@@ -2,7 +2,7 @@
 layout: minimal
 title: Freasy Terms of Service
 permalink: freasy/terms_of_service/
-share-img: "/assets/img/freasyicon.png"
+share-img: "/assets/img/freasy/freasyicon.png"
 ---
 # Freasy Terms of Service
 ---

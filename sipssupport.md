@@ -3,11 +3,11 @@ layout: page
 title: Sips Support
 subtitle: Get Help With Sips
 permalink: /sips/support
-share-img: "/assets/img/sipslogo.png"
+share-img: "/assets/img/sips/sipslogo.png"
 ---
 <div align="center">
 
-    <img src="{{ "/assets/img/sipslogo.png" | relative_url }}" style="width: 18%; border-radius: 50%; border: 1px solid #404040"/>
+    <img src="{{ "/assets/img/sips/sipslogo.png" | relative_url }}" style="width: 18%; border-radius: 50%; border: 1px solid #404040"/>
 
 </div>
 

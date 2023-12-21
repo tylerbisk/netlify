@@ -2,17 +2,17 @@
 layout: page2
 title: About Cornell Racing FSAE
 permalink: /fsae/about
-share-img: "/assets/img/banner.jpg"
+share-img: "/assets/img/fsae/banner.jpg"
 ---
 
 
 <div align="center">
 
-    <img src="{{ "/assets/img/curacing.png" | relative_url }}" style="width: 98%"/>
+    <img src="{{ "/assets/img/fsae/curacing.png" | relative_url }}" style="width: 98%"/>
     <p></p>
     <h2>About Cornell Racing - Formula SAE Electric</h2>
     <p></p>
-    <img src="{{ "/assets/img/banner.jpg" | relative_url }}" style="width: 98%"/>
+    <img src="{{ "/assets/img/fsae/banner.jpg" | relative_url }}" style="width: 98%"/>
 </div>
 <div>
     <br>
@@ -27,7 +27,7 @@ I joined the team when we transitioned to an electric powertrain.  Our electric 
 <p></p>
 <div align="center">
 
-    <img src="{{ "/assets/img/ARG20.jpg" | relative_url }}" style="width: 68%"/>
+    <img src="{{ "/assets/img/fsae/ARG20.jpg" | relative_url }}" style="width: 68%"/>
     <br>
 </div>
 **Frame:** Student-designed and in-house fabricated full carbon-fiber monocoque

@@ -3,12 +3,12 @@ layout: page
 title: Freasy Support
 subtitle: Get Help With Freasy
 permalink: /Freasy/support
-share-img: "/assets/img/freasyicon.png"
+share-img: "/assets/img/freasy/freasyicon.png"
 ---
 
 <div align="center">
 
-    <img src="{{ "/assets/img/freasyicon.png" | relative_url }}" style="width: 18%; border-radius: 50%; border: 1px solid #404040"/>
+    <img src="{{ "/assets/img/freasy/freasyicon.png" | relative_url }}" style="width: 18%; border-radius: 50%; border: 1px solid #404040"/>
 
 </div>
 

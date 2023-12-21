@@ -2,7 +2,7 @@
 layout: minimal
 title: Sips Privacy Policy
 permalink: /sips/privacy/
-share-img: "/assets/img/sipslogo.png"
+share-img: "/assets/img/sips/sipslogo.png"
 ---
 # Sips Privacy Policy
 ---
